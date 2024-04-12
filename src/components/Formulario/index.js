@@ -3,14 +3,20 @@ import Botao from '../Botao'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
+import CampoImagem from '../CampoImagem'
 
 const Formulario = (props) => {
   //vamos chamar um hook (gancho) para conseguirmos manter um estado dentro de uma função
   const [nome, setNome] = useState('') //o 'use' sempre vai ser um hook, nesse caso será um hook do estado
   const [cargo, setCargo] = useState('')
-  const [imagem, setImagem] = useState('')
+  // const [imagem, setImagem] = useState('')
   const [time, setTime] = useState('')
 
+  const [imagem, setImagem] = useState(null)
+
+  const aoImagemAlterada = (file) => {
+    setImagem(file)
+  }
 
   const aoSalvar = (evento) => {
     evento.preventDefault() //para evitar q a pagina seja recarregada ao formulario ser submetido
@@ -22,7 +28,7 @@ const Formulario = (props) => {
     })
     setNome('')
     setCargo('')
-    setImagem('')
+    setImagem(null)
     setTime('')
   }
 
@@ -44,11 +50,11 @@ const Formulario = (props) => {
           valor={cargo}
           aoAlterado={valor => setCargo(valor)}
         />
-        <CampoTexto 
+        <CampoImagem 
           label="Imagem" 
           placeholder="Digite o endereço da imagem"
           valor={imagem}
-          aoAlterado={valor => setImagem(valor)}
+          aoAlterado={aoImagemAlterada}
         />
         <ListaSuspensa 
           obrigatorio={true} 

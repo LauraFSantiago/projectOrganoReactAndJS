@@ -1,0 +1,35 @@
+.campo-imagem {
+  margin: 24px 0;
+}
+
+.campo-imagem label {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 8px;
+
+}
+
+.campo-imagem input {
+  box-shadow: 10px 10px 30px rgb(0, 0, 0, 0.06);
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.campo-imagem-upload-button {
+  background-color: #6278F7;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 32px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  margin: 32px 0;
+}
+
+.campo-imagem-upload-button:hover {
+  color: #95ffd4;
+}

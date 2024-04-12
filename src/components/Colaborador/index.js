@@ -1,10 +1,12 @@
 import './Colaborador.css'
 
-const Colaborador = ({ nome, imagem, cargo, corDeFundo }) => { //aqui ele vai desestruturar o obj pra n precisar passar props na frente de cada var
+const Colaborador = ({ nome, imagem, cargo, corDeFundo }) => {
+  const urlImagem = URL.createObjectURL(imagem)
+
   return (
     <div className='colaborador'>
       <div className='cabecalho' style={{ backgroundColor: corDeFundo }}>
-        <img src={imagem} alt={nome}/>
+        <img src={urlImagem} alt={nome}/>
       </div>
       {/* ------ */}
       <div className='rodape'>
