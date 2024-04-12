@@ -1,0 +1,8 @@
+.banner {
+  background-color: #6278F7;
+  text-align: center; /*para oq estiver dentro do banner estar centralizado */
+}
+
+.banner img {
+  max-width: 100%;
+}
