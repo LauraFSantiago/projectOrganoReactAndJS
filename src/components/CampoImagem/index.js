@@ -9,7 +9,7 @@ const CampoImagem = (props) => {
   return (
     <div className="campo-imagem">
       <label>{props.label}</label>
-      <input type="file" onChange={aoDigitado} required={props.obrigatorio} placeholder={props.placeholder} />
+      <input accept="image/*" type="file" onChange={aoDigitado} required={props.obrigatorio} placeholder={props.placeholder} />
     </div>
   )
 }

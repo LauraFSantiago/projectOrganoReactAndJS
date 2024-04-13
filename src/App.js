@@ -48,7 +48,6 @@ function App() {
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
     // debugger - utilizar para debugar o codigo
-    console.log(colaborador)
     setColaboradores([...colaboradores, colaborador])//para entender: eu tenho um novo array, to espalhando aqui os colaboradores antigos, e pondo oq acabou de chegar no final, agora temos um array novo com todos os colaboradores
   }
 

@@ -1,7 +1,8 @@
 import './Colaborador.css'
 
 const Colaborador = ({ nome, imagem, cargo, corDeFundo }) => {
-  const urlImagem = URL.createObjectURL(imagem)
+  // const urlImagem = imagem ? URL.createObjectURL(imagem) : undefined
+  const urlImagem = imagem instanceof Blob ? URL.createObjectURL(imagem) : imagem;
 
   return (
     <div className='colaborador'>
